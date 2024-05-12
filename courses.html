@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>online photography school courses </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main>
+    <section id="home" class="hero">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 style="font-size:60px; font-weight:lighter;">Online Photography School</h1>
+    </section>
+    <div class="container">
+        <button class="open-btn" onclick="toggleSidebar()">☰ <span id="btn-content">content</span> </button>
+        <div class="sidebar">
+            <br>
+            <br>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="#">Basic</a></li>
+                <li><a href="#">Intermediate</a></li>
+                <li><a href="#">Advanced</a></li>
+                <li><a href="#">Masterclass</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="courses-begin">
+        <h1 style="font-weight: lighter " >Start the journey of photography</h1>
+    </div>
+
+    <div class="courses">
+
+
+    </div>
+
+
+</main>
+  <script>
+    function toggleSidebar() {
+    var sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('open');
+    }
+
+    function scrollDown() {
+       window.scrollBy(0, 100);
+       
+    }
+
+       if (sidebar.classList.contains('open')) {
+            btnContent.textContent = '✕'; // Change to X when sidebar is open
+        } else {
+            btnContent.textContent = '☰'; // Change back to ☰ when sidebar is closed
+        }
+    }
+
+    function scrollDown() {
+        window.scrollBy(0, 100);
+  </script>
+
+
+
+
+</body>
+</html>
