@@ -68,7 +68,6 @@ section {
 
 .sidebar {
   width: 200px;
-  /* Adjust width as needed */
   background-color: #f4f4f4;
   padding: 20px;
   margin: none;
@@ -76,7 +75,6 @@ section {
 
 .sidebar a {
   display: block;
-  /* Display links as block elements */
   color: #333;
   text-decoration: none;
   padding: 10px 0;
@@ -176,7 +174,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eeeee4;
+  background-color: #A2A2A2;
+  flex-direction: column; /* Arrange children vertically */
 }
 
 .index-courses-nav {
@@ -184,4 +183,19 @@ section {
   height: 50vh;
   background-image: url("images/DSC_3209.JPG");
   background-size:cover ;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex; /* Add display flex to enable alignment */
+  justify-content: flex-end; /* Align items to the bottom */
+}
+
+.index-courses a{
+  margin-top: 8vh;
+  margin-bottom: 2vh;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: lighter;
+  color: #ffffff;
+
 }
