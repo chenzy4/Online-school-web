@@ -1,62 +1,110 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Online Photography School</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <title>Online Photography School</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <main id="index-main">
+      <section id="home" class="hero">
+        <header>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <h1 style="font-size: 60px; font-weight: 100">
+          Online Photography School
+        </h1>
+      </section>
 
-<body>
+      <section class="intro">
+        <div class="intro-img-container">
+          <img src="images/_DSC2261.jpg" alt="camera pic" />
+        </div>
 
+        <div class="intro-text-container">
+          <p>
+            "Welcome to the Online Photography School! Here, you're in control
+            of your learning journey. Whether you're a complete beginner or
+            already snapping away, our resources are here to help you improve
+            your photography skills. Explore our courses, tips, and tricks at
+            your own pace, and discover how to capture the world through your
+            lens like a pro. Get ready to unlock your creativity and take your
+            photography to the next level!"
+          </p>
+        </div>
+      </section>
 
-  <main id="index-main">
-    <section id="home" class="hero">
-      <header>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <h1 style="font-size: 60px; font-weight: 100;">Online Photography School</h1>
-    </section>
+      <section class="index-courses">
+        <div class="slideshow-container" style="width: 45%;">
+          <div class="mySlides fade">
+            <img src="images/DSC_3209.JPG" style="width: 100%" />
+          </div>
+          <div class="mySlides fade">
+            <img src="images/_DSC0974.JPG" style="width: 100%" />
+          </div>
+          <div class="mySlides fade">
+            <img src="images/DSC_8231.jpg" style="width: 100%" />
+          </div>
+          <a class="course-btn" href="basic.html">Go to Basic Course</a>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </section>
+    </main>
 
-    <section class="intro">
-      <div class="intro-img-container">
-        <img src="images/_DSC2261.jpg" alt="camera pic">
-      </div>
+    <footer>
+      <p>&copy; 2023 Online Photography School. All rights reserved.</p>
+    </footer>
 
-      <div class="intro-text-container">
-        <p>"Welcome to the Online Photography School! Here, you're in control of your learning journey.
-          Whether you're a complete beginner or already snapping away, our resources are here to help you
-          improve your photography skills. Explore our courses, tips, and tricks at your own pace,
-          and discover how to capture the world through your lens like a pro. Get ready to unlock your
-          creativity and take your photography to the next level!"</p>
-      </div>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
 
-    </section>
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
 
-    <section class="index-courses">
-      <div class="index-courses-nav">
-        
-      </div> 
-      <a href="courses.html">Courses</a>
-    </section>
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
 
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
 
-  </main>
-
-
-
-
-
-  </div>
-  <footer>
-    <p>&copy; 2023 Online Photography School. All rights reserved.</p>
-  </footer>
-</body>
-
+      // Automatic slideshow
+      setInterval(() => {
+        plusSlides(1);
+      }, 5000); // Change image every 5 seconds
+    </script>
+  </body>
 </html>
