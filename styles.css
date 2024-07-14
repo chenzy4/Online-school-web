@@ -3,14 +3,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Gill Sans", sans-serif;
+  font-weight: 100;
 }
 
 /* Global styles */
 body {
   line-height: 1.6;
 }
-
-#index-main {
+html{
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -80,7 +80,7 @@ section {
   padding: 10px 0;
 }
 
-.container {
+.sidebar_container {
   display: flex;
 }
 
@@ -99,7 +99,7 @@ section {
   z-index: 900;
 }
 
-.container.open {
+.sidebar_container.open {
   margin-left: 0;
 }
 
@@ -157,6 +157,9 @@ section {
   align-items: center;
   padding: 0 35px;
 }
+
+
+
 
 .courses-hero {
   background-image: url("images/_DSC3740.JPG");
@@ -274,4 +277,114 @@ section {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+
+#courses_selection h1 {
+  margin: 0;
+}
+
+.index-coursesnav {
+  background-image: url("images/_DSC0392.jpg");
+  background-size: cover;
+  height: 100vh;
+  justify-content: center;
+  display: flex;
+}
+
+
+.courses_selection_box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 100;
+  width: 30%;
+  background-color: #333;
+  height: 30vh;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  margin-left: 0;
+  border-radius: 15px;
+}
+
+.courses_selection_boxes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-self: flex-end;
+  width: 100%;
+}
+
+.courses_selection {
+  justify-content: center;
+  background-color: #d1cdcb;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column;
+}
+
+.courses_selection_box p {
+  margin-left: 1vh;
+  color: white;
+
+}
+
+.courses_selection h1{
+  align-self: center;
+}
+
+
+.courses_selection_intro{
+  width: 30%;
+  margin-left: auto;
+}
+
+
+.courses_selection_box button {
+  margin-top: auto;
+  height: 5vh;
+  border-radius: 15px;
+  width: 50%;
+  align-self: center;
+  margin-bottom: 1vh;
+
+}	
+
+.three-part-hr{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.hrs{
+  background-color: #333;
+  height: 1px;
+  width: 45vh;
+}
+
+.unit{
+  border-radius: 15px;
+  background-color: #A2A2A2;
+  width: 65%;
+  height: 35vh;
+  align-self: center;
+  margin-top: 10vh;
+}
+
+.units_container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.indexnavbtn{
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
+  height: 6vh;
+  align-self: center;
 }

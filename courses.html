@@ -20,7 +20,7 @@
         </header>
         <h1 style="font-size: 60px; font-weight: lighter;">Online Photography School</h1>
     </section>
-    <div class="container">
+    <div class="sidebar_container">
         <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
         <div class="sidebar">
             <br><br>
@@ -34,9 +34,64 @@
         </div>
     </div>
     
-    <section>
+    <section class="courses_selection">
+        <h1>Choose the course you would like to take</h1>
 
+        <div class="courses_selection_boxes">
+            <div class="courses_selection_box">     
+                <button> beginner</button>
+            </div>    
+            <div class="courses_selection_box"> 
+                <button>intermediate</button>
+            </div>
+            <div class="courses_selection_box">    
+                <button>Advanced</button>
+            </div>
+        </div>
+        <div class="three-part-hr">
+            <div class="hrs">
+                <ul style="list-style-type:none;">
+                    <li>iso</li>
+                    <li>aperature</li>
+                    <li>shutter speed</li>
+                </ul>
+            </div>
+            <div class="hrs">
+                <ul style="list-style-type:none;">
+                    <li>composition</li>
+                    <li>aesthetics</li>
+                </ul>
+            </div>
+            <div class="hrs">
+                <ul style="list-style-type:none;">
+                    <li>history of photography</li>
+                    <li>understanding beauty of photography</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
+    <section class="index-courses">
+        <div class="slideshow-container" style="width: 45%;">
+          <div class="mySlides fade">
+            <img src="images/DSC_3209.JPG" style="width: 100%" />
+          </div>
+          <div class="mySlides fade">
+            <img src="images/_DSC0974.JPG" style="width: 100%" />
+          </div>
+          <div class="mySlides fade">
+            <img src="images/DSC_8231.jpg" style="width: 100%" />
+          </div>
+          <a class="course-btn" href="basic.html">Go to Basic Course</a>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
     </section>
 
     <section>
@@ -44,17 +99,6 @@
 
     </section>
 </main>
-<script>
-    function toggleSidebar() {
-        var sidebar = document.querySelector('.sidebar');
-        sidebar.classList.toggle('open');
-        var btnContent = document.getElementById('btn-content');
-        if (sidebar.classList.contains('open')) {
-            btnContent.textContent = '✕'; // Change to X when sidebar is open
-        } else {
-            btnContent.textContent = '☰'; // Change back to ☰ when sidebar is closed
-        }
-    }
-</script>
+<script src="scripts.js"></script>
 </body>
 </html>
