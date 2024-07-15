@@ -18,7 +18,7 @@
                 </ul>
             </nav>
         </header>
-        <h1 style="font-size: 60px; font-weight: lighter;">Unit 1</h1>
+        <h1 style="font-size: 60px; font-weight: lighter;">Unit 3 - what is Aperature?</h1>
     </section>
     <div class="container">
         <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
@@ -27,7 +27,7 @@
             <h2>Navigation</h2>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">course</a></li>
+                <li><a href="courses.html">Courses</a></li>
                 <li><a href="beginner.html">Beginner</a></li>               
                 <li><a href="intermediate.html">Intermediate</a></li>
                 <li><a href="advanced.html">Advanced</a></li>
@@ -36,24 +36,27 @@
     </div>
 
     <div class="unitcontent">
-        <p style="font-size: large;">Welcome to the first lesson! In this lesson, you will start with Program Mode (P mode) and Auto Focus Mode. These settings are designed to help you get familiar with the basics of photography, allowing you to understand how to take well-exposed photos with your camera. By the end of this lesson, you will have a solid foundation on how to use these modes effectively to capture great images.</p>
+        <p style="font-size: large;">Welcome to Unit 3! In this unit, we'll explore the concept of aperture and how it affects your photos. You'll learn how to control depth of field and use aperture settings creatively.</p>
 
-        <h2>Understanding Program Mode (P Mode)</h2>
-        <p>Program Mode, or P Mode, is a semi-automatic mode on your camera. It automatically sets the aperture and shutter speed for you, allowing you to focus on framing your shot and composing your photo. This mode is ideal for beginners as it offers a good balance between control and convenience.</p>
+
+        <h2>Aperature</h2>
+        <p>Aperture refers to the opening in a lens through which light passes to enter the camera. It is measured in f-stops (e.g., f/2.8, f/5.6). A larger aperture (smaller f-stop number) lets in more light and results in a shallow depth of field, while a smaller aperture (larger f-stop number) lets in less light and results in a greater depth of field.</p>
         <div class="unitcontentimg"> </div>
-        <h2>Understanding Auto Focus Mode</h2>
-        <p>Auto Focus Mode helps your camera automatically focus on the subject in the frame. This mode is particularly useful when shooting moving subjects or in situations where you need to quickly capture a moment.</p>
+        <h2>Deptyh of field</h2>
+        <p>Depth of field is the distance between the nearest and farthest objects in a scene that appear acceptably sharp in an image. A shallow depth of field (achieved with a larger aperture) isolates the subject from the background, creating a blurry background. A greater depth of field (achieved with a smaller aperture) keeps more of the scene in focus.</p>
+        <div class="unitcontentimg"> </div>
+        <ul>
+            <li><strong>Shallow Depth of Field:</strong> Use a larger aperture (e.g., f/2.8) for portraits to blur the background.</li>
+            <li><strong>Greater Depth of Field:</strong> Use a smaller aperture (e.g., f/16) for landscapes to keep everything in focus.</li>
+        </ul>
         <div class="unitcontentimg"> </div>
         <h2>Try it yourself</h2>
-        <p>To operate Program Mode (P Mode) on your camera, turn the mode dial to 'P.' In this mode, the camera automatically sets the aperture and shutter speed, but you can still adjust settings like ISO, white balance, and exposure compensation as needed.
-            For Auto Focus (AF) Mode, switch the camera to 'AF' using the focus mode switch on the lens or camera body. If your lens has a switch labeled 'AF/MF,' set it to 'AF.' 
-            Some older or manual lenses might not support autofocus, in which case you would need to manually focus by rotating the focus ring on the lens. In the camera menu, you can also select different focus areas or modes, 
-            such as single-point AF, dynamic area AF, or auto-area AF, depending on your subject and shooting situation.</p>
+        <p>Practice using different aperture settings. Set your camera to Aperture Priority mode (A or Av) and adjust the aperture value. Observe how the depth of field changes with different f-stop numbers. Take photos of the same scene with various apertures to see the effect on depth of field.</p>
     </div>
 
     <div class="unitnext">
         <h1 style=" position: absolute; transform: translate(0%, -100%); color: aliceblue;"> Start next course or quiz? </h1>
-        <button class="unitnextbtn" onclick="nextunit('beginner', 2)">Next unit</button>
+        <button class="unitnextbtn" onclick="nextunit(4)">Next unit</button>
         <dialog id="quiz-dialog">
             <div class="quiztopcontainer">
                 <p id="question">Loading...</p>

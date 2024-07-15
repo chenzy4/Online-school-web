@@ -292,6 +292,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
+
   }
 
   .quiz-container {
@@ -333,9 +334,21 @@
 
 .unitnextbtn {
   padding: 15px;
+  margin-right: 5%;
+  height: 5vh;
+  
 }
 
 #quizopenbtn {
   padding: 15px;
+  margin-left: 5%;
+  height: 5vh;
+}
 
+.units_container ul{
+  margin-left: 2%;
+}
+
+.units_container li {
+  margin-left: 2%;
 }

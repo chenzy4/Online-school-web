@@ -341,15 +341,20 @@ section {
 }
 
 
-.courses_selection_box button {
+.courses_selection_box a {
   margin-top: auto;
-  height: 5vh;
   border-radius: 15px;
-  width: 50%;
   align-self: center;
   margin-bottom: 1vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  width: 10rem; 
+  text-align: center;
+  text-decoration: none;
+  color: #333;
 
-}	
+}
 
 .three-part-hr{
   display: flex;

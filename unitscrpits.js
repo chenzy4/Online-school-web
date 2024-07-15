@@ -11,9 +11,6 @@ function toggleSidebar() {
 }
 
 
-
-
-
 const quizdata = [
     {
       question: "How to take a clear photo?",
@@ -36,7 +33,7 @@ const quizdata = [
   const dialog = document.getElementById("quiz-dialog");
   const question = document.getElementById("question");
   const optionButtons = document.querySelectorAll(".quiz-option");
-  
+  var score = 0;
   let currentQuestionIndex = 0;
   
   function loadQuiz() {                                       question.textContent = quizdata[0].question;          
@@ -56,15 +53,37 @@ const quizdata = [
   
   function checkAnswer(event) {
     const selectedAnswer = event.target.textContent;
-    if (selectedAnswer === quizdata[0].answer) {
+    if (selectedAnswer === quizdata[currentQuestionIndex].answer) {
       alert("Correct!");
+      score += 1;
+      console.log(score)
+      nextquestion()
     } else {
       alert("Wrong answer. Try again!");
+      nextquestion()
     }
   }
   
+	function nextquestion() {
+    currentQuestionIndex++; 
+    if (currentQuestionIndex < quizdata.length) {
+        question.textContent = quizdata[currentQuestionIndex].question;
+        optionButtons.forEach((button, index) => {
+            button.textContent = quizdata[currentQuestionIndex].options[index];
+        });
+    } else {
+        alert("Congratulations! You have finished all questions.");
+    }
+}	
+
+
   optionButtons.forEach(button => {
     button.addEventListener("click", checkAnswer);
   });
   
   loadQuiz();
+
+function nextunit(level,unitnumber) {
+    window.location.href= level +'unit' + unitnumber + '.html';
+}
+

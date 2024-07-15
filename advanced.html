@@ -18,7 +18,7 @@
                 </ul>
             </nav>
         </header>
-        <h1 style="font-size: 60px; font-weight: lighter;">Beginner</h1>
+        <h1 style="font-size: 60px; font-weight: lighter;">Advanced</h1>
     </section>
     <div class="container">
         <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
@@ -28,8 +28,9 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="courses.html">course</a></li>
-                <li><a href="#">Advanced</a></li>
-                <li><a href="#">Masterclass</a></li>
+                <li><a href="beginner.html">Beginner</a></li>               
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
             </ul>
         </div>
     </div>
@@ -48,17 +49,6 @@
     </div>
 
 </main>
-<script>
-    function toggleSidebar() {
-        var sidebar = document.querySelector('.sidebar');
-        sidebar.classList.toggle('open');
-        var btnContent = document.getElementById('btn-content');
-        if (sidebar.classList.contains('open')) {
-            btnContent.textContent = '✕'; // Change to X when sidebar is open
-        } else {
-            btnContent.textContent = '☰'; // Change back to ☰ when sidebar is closed
-        }
-    }
-</script>
+<script src="scripts.js"></script>
 </body>
 </html>
