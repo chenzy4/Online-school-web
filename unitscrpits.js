@@ -11,12 +11,13 @@ function toggleSidebar() {
 }
 
 
-const quizdata = [
+const unit1quizdata = [
     {
-      question: "How to take a clear photo?",
+      question: "unit1,?",
       options: ["Use a tripod", "Increase ISO", "Use a faster shutter speed", "Use autofocus"],
       answer: "Use a faster shutter speed"
     },        
+
     {
       question: "What is the purpose of a lens hood?",
       options: ["Protects the lens from scratches", "Reduces glare", "Improves image sharpness", "All of the above"],
@@ -29,7 +30,27 @@ const quizdata = [
     }
     
   ];
-  
+
+  const unit2quizdata = [
+    {
+      question: "unit2,?",
+      options: ["Use a tripod", "Increase ISO", "Use a faster shutter speed", "Use autofocus"],
+      answer: "Use a faster shutter speed"
+    },        
+
+    {
+      question: "What is the purpose of a lens hood?",
+      options: ["Protects the lens from scratches", "Reduces glare", "Improves image sharpness", "All of the above"],
+      answer: "All of the above"
+    },
+    {
+      question: "What is the aperture of a lens?",
+      options: ["The size of the opening that lets light into the camera", "The focal length of the lens", "The distance between the lens and the sensor", "The amount of zoom"],
+      answer: "The size of the opening that lets light into the camera"
+    }
+    
+  ];
+
   const dialog = document.getElementById("quiz-dialog");
   const question = document.getElementById("question");
   const optionButtons = document.querySelectorAll(".quiz-option");
@@ -42,8 +63,8 @@ const quizdata = [
     });
   }
   
-  function openDialog() {
-    loadQuiz();
+  function openDialog(unitnum) {
+    loadQuiz(unitnum);
     dialog.showModal();
   }
   
