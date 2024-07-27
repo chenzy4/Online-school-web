@@ -313,6 +313,8 @@ section {
   flex-wrap: wrap;
   align-self: flex-end;
   width: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 .courses_selection {

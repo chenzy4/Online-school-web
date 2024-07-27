@@ -30,9 +30,9 @@ function showSlides(n) {
 }
 
 // Automatic slideshow
-setInterval(() => {
-  plusSlides(1);
-}, 5000); // Change image every 5 seconds
+//setInterval(() => {
+  //plusSlides(1);
+//}, 5000); // Change image every 5 seconds
 
 function toggleSidebar() {
     var sidebar = document.querySelector('.sidebar');

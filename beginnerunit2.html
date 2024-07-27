@@ -53,17 +53,23 @@
         <button class="unitnextbtn" onclick="nextunit(3)">Next unit</button>
         <dialog id="quiz-dialog">
             <div class="quiztopcontainer">
-                <p id="question">Loading...</p>
                 <button onclick="closeDialog()" class="quizclosebtn">Close</button>
             </div>
+
             <div class="quiz-container">
-              <button class="quiz-option"></button>
-              <button class="quiz-option"></button>
-              <button class="quiz-option"></button>
-              <button class="quiz-option"></button>
-            </div>
+                <div class="quiz-question">
+                    <h1 id="question">Loading...</h1>
+                </div>
+                <div class="quiz-optionscontainer">
+                    <button class="quiz-option"></button>
+                    <button class="quiz-option"></button>
+                    <button class="quiz-option"></button>
+                    <button class="quiz-option"></button>
+                  </div>
+
+            </div >
         </dialog>
-        <button onclick="openDialog()" id="quizopenbtn">Start Quiz</button>
+        <button onclick="openDialog('beginnerUnit2')" id="quizopenbtn">Start Quiz</button>
     </div>
 </main>
 <script src="unitscrpits.js"></script>
