@@ -243,6 +243,14 @@
     flex-direction: column;
   }
 
+
+  .unit .unitbtn{
+    padding: 10px,20px;
+    height: 4vh;
+    display: flex;
+    text-align: center;
+
+  }
   .unit h4 {
     margin-left: 2%;
   }
@@ -362,8 +370,4 @@
 
 .units_container li {
   margin-left: 2%;
-}
-
-#unitnum {
-  display: none;
 }
