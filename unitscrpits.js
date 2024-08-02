@@ -22,6 +22,16 @@ const quizzes = {
           question: "What is the purpose of a lens hood?",
           options: ["Protects the lens from scratches", "Reduces glare", "Improves image sharpness", "All of the above"],
           answer: "All of the above"
+      },
+      {
+        question: "What is the purpose of a tripod?",
+          options: ["To hold the camera steady", "To protect the camera from light", "To hold the camera in place", "All of the above"],
+          answer: "To hold the camera steady"
+      },
+      {
+          question: "What is the aperture of a lens?",
+          options: ["The size of the opening that lets light into the camera", "The focal length of the lens", "The distance between the lens and the sensor", "The amount of zoom"],
+          answer: "The size of the opening that lets light into the camera"
       }
   ],
   beginnerUnit2: [
@@ -38,12 +48,18 @@ const quizzes = {
   const dialog = document.getElementById("quiz-dialog");
   const question = document.getElementById("question");
   const optionButtons = document.querySelectorAll(".quiz-option");
+  const scoreresults = document.getElementById("score");
+  const correctannouncement = document.getElementById("correct");
+  const announcement = document.getElementById("announcement");
+  const results = document.getElementById("results");
+
 
   let score = 0;
   let currentQuestionIndex = 0;
   let quizdata
   
-  function loadQuiz(unit) {      
+  function loadQuiz(unit) {    
+    results.style.display = "none"; 
     quizdata = quizzes[unit];                                 
     question.textContent = quizdata[currentQuestionIndex].question;          
     optionButtons.forEach((button, index) => {
@@ -63,16 +79,18 @@ const quizzes = {
   function checkAnswer(event) {
     const selectedAnswer = event.target.textContent;
     if (selectedAnswer === quizdata[currentQuestionIndex].answer) {
-      alert("Correct!");
-      score += 1;
+      scoreresults.textContent = score += 1;
       console.log(score)
-      nextquestion()
+      results.style.display = "flex";
     } else {
-      alert("Wrong answer. Try again!");
-      nextquestion()
+      results.style.display = "flex";
     }
   }
   
+  function navigateNextQuestion() {
+    results.style.display = "none";
+    nextquestion()
+  }
 	function nextquestion() {
     currentQuestionIndex++; 
     if (currentQuestionIndex < quizdata.length) {
@@ -93,6 +111,7 @@ const quizzes = {
   loadQuiz();
 
 function nextunit(level,unitnumber) {
-    window.location.href= level +'unit' + unitnumber + '.html';
+    window.location.href= level +'unit' + unitnumber + '.html'; //navigate to the next unit
+    console.log(level +'unit' + unitnumber + '.html')
 }
 

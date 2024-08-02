@@ -10,6 +10,7 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+  console.log(slideIndex)
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");

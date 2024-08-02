@@ -13,8 +13,8 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="courses.html">Courses</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -56,7 +56,7 @@
         <button class="unitnextbtn" onclick="nextunit('beginner', 2)">Next unit</button>
         <dialog id="quiz-dialog">
             <div class="quiztopcontainer">
-                <button onclick="closeDialog()" class="quizclosebtn">Close</button>
+                <button  onclick="closeDialog()" class="quiz-closebtn">Close</button>
             </div>
 
             <div class="quiz-container">
@@ -68,8 +68,21 @@
                     <button class="quiz-option"></button>
                     <button class="quiz-option"></button>
                     <button class="quiz-option"></button>
-                  </div>
+                </div>
 
+                <div id="results">
+                    <div id="announcement">
+                        <h1 id="results-announcement">Score=<span id="score"> 0</span></h1>
+                        <h3 id ="correct";>&#x2713 
+                        <br>
+                        congrats! you got it right!
+                        </h3>
+                        <h3 id="wrong">
+                            sorry! You got it wrong.
+                        </h3>
+                    </div>
+                    <button class="quiz-next" onclick="navigateNextQuestion()">Next</button>
+                </div>
             </div >
         </dialog>
         <button onclick="openDialog('beginnerUnit1')" id="quizopenbtn">Start Quiz</button>
