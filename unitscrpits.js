@@ -39,7 +39,44 @@ const quizzes = {
       question: "What is the aperture of a lens?",
       options: ["The size of the opening that lets light into the camera", "The focal length of the lens", "The distance between the lens and the sensor", "The amount of zoom"],
       answer: "The size of the opening that lets light into the camera"
-    }
+    },
+  
+  ],
+  beginnerUnit3: [
+  ],
+  beginnerUnit4: [
+    {
+      question: "What does ISO control in a camera?",
+      options: ["Aperture size", "Shutter speed", "Sensor sensitivity to light", "Focal length"],
+      answer: "Sensor sensitivity to light"
+    },
+   {
+      question: "When should you use a high ISO setting?",
+      options: ["In bright sunlight", "In low-light conditions", "To reduce noise", "For faster shutter speed"],
+      answer: "In low-light conditions"
+    },
+  {
+      question: "What is a drawback of using a high ISO?",
+      options: ["Increased noise", "Decreased sharpness", "Increased depth of field", "Faster battery drain"],
+      answer: "Increased noise"
+  }
+  ],
+  beginnerUnit5: [
+    {
+      question: "What does ISO control in a camera?",
+      options: ["Aperture size", "Shutter speed", "Sensor sensitivity to light", "Focal length"],
+      answer: "Sensor sensitivity to light"
+  },
+  {
+      question: "When should you use a high ISO setting?",
+      options: ["In bright sunlight", "In low-light conditions", "To reduce noise", "For faster shutter speed"],
+      answer: "In low-light conditions"
+  },
+  {
+      question: "What is a drawback of using a high ISO?",
+      options: ["Increased noise", "Decreased sharpness", "Increased depth of field", "Faster battery drain"],
+      answer: "Increased noise"
+  }
   ]
 };
 
@@ -128,4 +165,3 @@ function nextunit(level, unitnumber) {
   window.location.href = level + 'unit' + unitnumber + '.html'; //navigate to the next unit
   console.log(level + 'unit' + unitnumber + '.html')
 }
-

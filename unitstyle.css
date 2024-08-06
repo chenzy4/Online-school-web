@@ -294,6 +294,10 @@ section {
   margin-left: 10%;
 }
 
+.unitcontent ol {
+  margin-left: 20%;
+  margin-right: 20%;
+}
 .unitcontentimg {
   background-color: #333;
   width: 50%;
@@ -378,6 +382,9 @@ section {
   padding: 15px;
   height: 5vh;
   border-radius: 10px;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
 .units_container ul {
@@ -420,4 +427,29 @@ section {
   border-radius: 5px;
   border-width: 1px;
 
+}
+
+#fade-in-text {
+  opacity: 0;
+  animation: fadeIn 2s forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.aboutintro {
+  margin: 40vh;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 }

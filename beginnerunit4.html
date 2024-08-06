@@ -36,41 +36,66 @@
     </div>
 
     <div class="unitcontent">
-        <p style="font-size: large;">Welcome to Unit 4! In this unit, we'll explore the concept of aperture and how it affects your photos. You'll learn how to control depth of field and use aperture settings creatively.</p>
-
-
-        <h2>Shutter speed</h2>
-        <p>Aperture refers to the opening in a lens through which light passes to enter the camera. It is measured in f-stops (e.g., f/2.8, f/5.6). A larger aperture (smaller f-stop number) lets in more light and results in a shallow depth of field, while a smaller aperture (larger f-stop number) lets in less light and results in a greater depth of field.</p>
+        <p style="font-size: large;">In this lesson, we will explore the concept of shutter speed and its impact on your photography. Understanding shutter speed is crucial for capturing both motion and stillness in your images.</p>
+        <h2>Understanding Shutter Speed</h2>
+        <p>Shutter speed refers to the length of time your camera’s shutter is open, exposing light onto the camera sensor. It's measured in seconds or fractions of a second, such as 1/1000, 1/500, 1/250, 1/125, 1/60, 1/30, and so on. A faster shutter speed (e.g., 1/1000) freezes motion, while a slower shutter speed (e.g., 1/30) can create motion blur.</p>
         <div class="unitcontentimg"> </div>
-        <h2>Deptyh of field</h2>
-        <p>Depth of field is the distance between the nearest and farthest objects in a scene that appear acceptably sharp in an image. A shallow depth of field (achieved with a larger aperture) isolates the subject from the background, creating a blurry background. A greater depth of field (achieved with a smaller aperture) keeps more of the scene in focus.</p>
+        <h2>Freezing Motion</h2>
+        <p>Using a fast shutter speed, like 1/1000 or higher, is ideal for freezing fast-moving subjects such as sports, wildlife, or any action scenes. It ensures that the moving subject appears sharp and without blur.</p>
         <div class="unitcontentimg"> </div>
-        <ul>
-            <li><strong>Shallow Depth of Field:</strong> Use a larger aperture (e.g., f/2.8) for portraits to blur the background.</li>
-            <li><strong>Greater Depth of Field:</strong> Use a smaller aperture (e.g., f/16) for landscapes to keep everything in focus.</li>
-        </ul>
+        <h2>Creating Motion Blur</h2>
+        <p>Slower shutter speeds, such as 1/60 or slower, are used to create motion blur, which can add a sense of movement and dynamism to your photos. This technique is often used in waterfall photography, capturing the flow of water, or in light trail photography to capture the movement of lights in the dark.
+        </p>
+        <h2>Balancing Exposure</h2>
+        <p>Shutter speed also plays a critical role in exposure. A fast shutter speed reduces the amount of light reaching the sensor, leading to darker images. Conversely, a slow shutter speed allows more light, resulting in brighter images. Balancing shutter speed with aperture and ISO is essential to achieve the correct exposure.</p>
         <div class="unitcontentimg"> </div>
         <h2>Try it yourself</h2>
-        <p>Practice using different aperture settings. Set your camera to Aperture Priority mode (A or Av) and adjust the aperture value. Observe how the depth of field changes with different f-stop numbers. Take photos of the same scene with various apertures to see the effect on depth of field.</p>
+        <ol>
+            <li>Fast Shutter Speed: Set your camera to Shutter Priority mode (S or Tv) and choose a fast shutter speed (e.g., 1/1000). Capture fast-moving subjects like cars, running pets, or sports activities.
+            </li>
+            <li>Slow Shutter Speed: Switch to a slower shutter speed (e.g., 1/30). Try capturing the movement of water in a stream or creating light trails from passing cars at night.</li>
+        </ol>
   </div>
 
-    <div class="unitnext">
-        <h1 style=" position: absolute; transform: translate(0%, -100%); color: aliceblue;"> Start next course or quiz? </h1>
-        <button class="unitnextbtn" onclick="nextunit('beginner', 5)">Next unit</button>
-        <dialog id="quiz-dialog">
-            <div class="quiztopcontainer">
-                <p id="question">Loading...</p>
-                <button onclick="closeDialog()" class="quizclosebtn">Close</button>
+  <div class="unitnext">
+    <h1 style=" position: absolute; transform: translate(0%, -100%); color: aliceblue;"> Start next course or
+        quiz? </h1>
+    <button class="unitnextbtn" onclick="nextunit('beginner', 5)">Next unit</button>
+    <dialog id="quiz-dialog">
+        <div class="quiztopcontainer">
+            <button onclick="closeDialog()" id="quiz-closebtn">Close</button>
+        </div>
+
+        <div class="quiz-container">
+            <div class="quiz-question">
+                <h1 id="question">Loading...</h1>
             </div>
-            <div class="quiz-container">
-              <button class="quiz-option"></button>
-              <button class="quiz-option"></button>
-              <button class="quiz-option"></button>
-              <button class="quiz-option"></button>
+            <div class="quiz-optionscontainer">
+                <button class="quiz-option"></button>
+                <button class="quiz-option"></button>
+                <button class="quiz-option"></button>
+                <button class="quiz-option"></button>
             </div>
-        </dialog>
-        <button onclick="openDialog()" id="quizopenbtn">Start Quiz</button>
+
+            <div id="results">
+                <h1 id="results-announcement">Score = <span id="score"> 0</span></h1>
+                <h3 id="correct">&#x2713
+                    <br>
+                    congrats! you got it right!
+                </h3>
+                <h3 id="wrong"> &#x2715
+                    <br>
+                    sorry! You got it wrong.
+                </h3>
+                <h3 id="finished">
+                    Congratulations! You have finished all questions.
+                </h3>
+                <button id="quiz-next" onclick="navigateNextQuestion()">Next</button>
+            </div>
+    </dialog>
+    <button onclick="openDialog('beginnerUnit4')" id="quizopenbtn">Start Quiz</button>
     </div>
+</div>
 </main>
 <script src="unitscrpits.js"></script>
 </body>

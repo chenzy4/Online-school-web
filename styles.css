@@ -395,7 +395,7 @@ section {
 
 .indexnavbtn{
   padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: transparent;
   color: #fff;
   text-decoration: none;
   font-size: 18px;
@@ -403,4 +403,53 @@ section {
   height: 6vh;
   align-self: center;
   text-align: center;
+  border-color: #fff;
+  border-width: 1px;
+  box-shadow: 0 0 4px #fff;
+}
+
+#fade-in-text {
+  opacity: 0;
+  animation: fadeIn 2s forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.aboutintro {
+  margin: 40vh;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.portfolio h1 {
+  transform: translate(0, 40vh);
+  font-size: 25px;
+  position: absolute;
+  flex-wrap: wrap;
+  margin: none;
+}
+
+.portfolio img {
+  position: absolute;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+.fade-in.visible {
+  opacity: 1;
 }

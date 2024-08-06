@@ -35,25 +35,29 @@
         </div>
     </div>
 
-    <div class="unitcontent">
+    <div class="unitcontent" >
         <p style="font-size: large;">In this unit, we will dive into the concept of focus, an essential aspect of photography. You will learn about different focus modes and how to achieve clarity in your photos.</p>
         <h2>Understanding Focus</h2>
         <p>Focus is the process of making adjustments to ensure that the subject of your photo is sharp and clear. You can achieve focus manually by turning the focus ring on your lens, or automatically by using your camera’s auto-focus feature.</p>
-        <div class="unitcontentimg"> </div>
+        <div class="unitcontentimg" style="background-image: url(images/dslr-2308202.jpg);"> </div>
         <h2>Understanding Clarity</h2>
         <p>Clarity refers to the overall sharpness and definition of your photo. Ensuring your images are clear involves not only proper focus but also avoiding camera shake and using appropriate settings for the lighting conditions.</p>
-        <div class="unitcontentimg"> </div>
+        <h2 class="cross" style="transform: translate(45%, 0);">&#x2715</h2>
+        <div class="unitcontentimg" style="background-image: url(images/leaf.jpg);"> </div>
+        <h2 class="tick" style="transform: translate(45%, 0);">&#x2713</h2>
+        <div class="unitcontentimg" style="background-image: url(images/_DSC1016.JPG);"> </div>
         <h2>Try it yourself</h2>
         <p>Practice using both manual and auto-focus modes. Switch to manual focus and use the focus ring to achieve sharpness. Then, switch to auto-focus and explore different AF modes (single-point, continuous, automatic). Take photos in various lighting conditions and review the sharpness and clarity.</p>
 
     </div>
 
     <div class="unitnext">
-        <h1 style=" position: absolute; transform: translate(0%, -100%); color: aliceblue;"> Start next course or quiz? </h1>
+        <h1 style=" position: absolute; transform: translate(0%, -100%); color: aliceblue;"> Start next course or
+            quiz? </h1>
         <button class="unitnextbtn" onclick="nextunit('beginner', 3)">Next unit</button>
         <dialog id="quiz-dialog">
             <div class="quiztopcontainer">
-                <button onclick="closeDialog()" class="quizclosebtn">Close</button>
+                <button onclick="closeDialog()" id="quiz-closebtn">Close</button>
             </div>
 
             <div class="quiz-container">
@@ -65,9 +69,24 @@
                     <button class="quiz-option"></button>
                     <button class="quiz-option"></button>
                     <button class="quiz-option"></button>
-                  </div>
+                </div>
 
-            </div >
+                <div id="results">
+                    <h1 id="results-announcement">Score = <span id="score"> 0</span></h1>
+                    <h3 id="correct">&#x2713
+                        <br>
+                        congrats! you got it right!
+                    </h3>
+                    <h3 id="wrong"> &#x2715
+                        <br>
+                        sorry! You got it wrong.
+                    </h3>
+                    <h3 id="finished">
+                        Congratulations! You have finished all questions.
+                    </h3>
+                    <button id="quiz-next" onclick="navigateNextQuestion()">Next</button>
+                </div>
+            </div>
         </dialog>
         <button onclick="openDialog('beginnerUnit2')" id="quizopenbtn">Start Quiz</button>
     </div>
