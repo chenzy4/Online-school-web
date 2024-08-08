@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Intermediate Photography Course - Unit 4</title>
+    <link rel="stylesheet" href="unitstyle.css">
+</head>
+
+<body>
+    <main>
+        <section id="home" class="hero" style="background-image: url('images/DSC_3052.jpg'); background-position: center; background-size: cover;"> 
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <h1 style="font-size: 60px; font-weight: 100;">Intermediate Unit 4: Composition Techniques</h1>
+        </section>
+        <div class="container">
+            <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
+            <div class="sidebar">
+                <br><br>
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="beginner.html">Beginner</a></li>
+                    <li><a href="intermediate.html">Intermediate</a></li>
+                    <li><a href="advanced.html">Advanced</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unitcontent">
+            <p style="font-size: large;">Welcome to the fourth intermediate lesson! Composition is a crucial aspect of photography that determines the visual appeal of your images. In this lesson, you'll learn essential composition techniques that will help you create balanced, eye-catching photos.</p>
+
+            <h2>Rule of Thirds</h2>
+            <p>The rule of thirds is one of the most fundamental composition techniques. It involves dividing your image into nine equal parts by two horizontal and two vertical lines. Here's how to apply it:</p>
+            <ol>
+                <li><strong>Enable the Grid:</strong> In Photoshop, go to <em>View</em> &gt; <em>Show</em> &gt; <em>Grid</em> to display the grid overlay.</li>
+                <li><strong>Position Your Subject:</strong> Place the key elements of your photo along the grid lines or at their intersections.</li>
+                <li><strong>Adjust the Crop:</strong> Use the crop tool to reposition your subject according to the rule of thirds for better balance.</li>
+            </ol>
+
+            <h2>Leading Lines</h2>
+            <p>Leading lines are visual elements that guide the viewer's eyes towards the main subject of your photo. Here's how to incorporate them:</p>
+            <div class="unitcontentimg" style="background-image: url(images/DSC_9693.JPG);"> </div>
+            <ol>
+                <li><strong>Identify Natural Lines:</strong> Look for roads, rivers, fences, or other lines in the environment that lead to your subject.</li>
+                <li><strong>Position the Camera:</strong> Align these lines to lead directly to your subject, creating a natural pathway for the viewer's eyes.</li>
+                <li><strong>Enhance with Editing:</strong> In Photoshop, you can emphasize these lines using the dodge and burn tools to add contrast.</li>
+            </ol>
+
+            <h2>Framing</h2>
+            <p>Framing involves using elements within the scene to create a frame around your subject. This technique can add depth and focus to your images:</p>
+            <div class="unitcontentimg" style="background-image: url(images/_DSC2860-3.jpg);"> </div>
+            <ol>
+                <li><strong>Find a Frame:</strong> Look for natural frames like windows, doorways, or tree branches.</li>
+                <li><strong>Position Your Subject:</strong> Place your subject within the frame to draw attention and add depth.</li>
+                <li><strong>Use Depth of Field:</strong> Use a wide aperture (e.g., f/2.8) to blur the frame slightly, ensuring the subject remains the focal point.</li>
+            </ol>
+
+            <h2>Symmetry and Patterns</h2>
+            <p>Symmetry and patterns can create visually pleasing images by providing balance and repetition. Here's how to use them effectively:</p>
+            <ol>
+                <li><strong>Identify Symmetrical Elements:</strong> Look for scenes where the left and right sides mirror each other.</li>
+                <li><strong>Center Your Subject:</strong> Place your subject in the center of the frame to highlight the symmetry.</li>
+                <li><strong>Capture Repeating Patterns:</strong> Patterns can be found in architecture, nature, and everyday objects. Frame them to emphasize repetition and rhythm.</li>
+            </ol>
+        </div>
+
+        <div class="unitnext">
+            <h1 style="position: absolute; transform: translate(0%, -100%); color: aliceblue;">Start next course or quiz?</h1>
+            <button class="unitnextbtn" onclick="nextunit('intermediate', 5)">Next unit</button>
+            <dialog id="quiz-dialog">
+                <div class="quiztopcontainer">
+                    <button onclick="closeDialog()" id="quiz-closebtn">Close</button>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h1 id="question">Loading...</h1>
+                    </div>
+                    <div class="quiz-optionscontainer">
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                    </div>
+
+                    <div id="results">
+                        <h1 id="results-announcement">Score = <span id="score">0</span></h1>
+                        <h3 id="correct">&#x2713<br>Congrats! You got it right!</h3>
+                        <h3 id="wrong">&#x2715<br>Sorry! You got it wrong.</h3>
+                        <h3 id="finished">Congratulations! You have finished all questions.</h3>
+                        <button id="quiz-next" onclick="navigateNextQuestion()">Next</button>
+                    </div>
+                </div>
+            </dialog>
+            <button onclick="openDialog('intermediateUnit4')" id="quizopenbtn">Start Quiz</button>
+        </div>
+    </main>
+    <script src="unitscrpits.js"></script>
+</body>
+
+</html>

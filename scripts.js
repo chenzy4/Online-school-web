@@ -1,9 +1,10 @@
 let slideIndex = 1;
-showSlides(slideIndex);
+showSlides(slideIndex);//show first slide by default
 
 function plusSlides(n) {
-  showSlides((slideIndex += n));
+  showSlides((slideIndex += n)); //plus or minus 1 to slideIndex
 }
+
 
 function currentSlide(n) {
   showSlides((slideIndex = n));
@@ -17,23 +18,20 @@ function showSlides(n) {
   if (n > slides.length) {
     slideIndex = 1;
   }
-  if (n < 1) {
+  if (n < 1) {// reset to first slide
     slideIndex = slides.length;
   }
-  for (i = 0; i < slides.length; i++) {
+  for (i = 0; i < slides.length; i++) { //set all slides to display: none
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", "");// change class name from "active" to "" (remove "active")
   }
-  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].style.display = "block";// change display
   dots[slideIndex - 1].className += " active";
 }
 
-// Automatic slideshow
-//setInterval(() => {
-  //plusSlides(1);
-//}, 5000); // Change image every 5 seconds
+
 
 function toggleSidebar() {
     var sidebar = document.querySelector('.sidebar');

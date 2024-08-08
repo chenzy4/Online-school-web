@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Photography Course - Unit 4</title>
+    <link rel="stylesheet" href="unitstyle.css">
+</head>
+
+<body>
+    <main>
+        <section id="home" class="hero" style="background-image: url(images/_DSC3277.JPG);">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <h1 style="font-size: 60px; font-weight: 100;">Advanced Unit 4: Advanced Lighting Techniques</h1>
+        </section>
+        <div class="container">
+            <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
+            <div class="sidebar">
+                <br><br>
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="beginner.html">Beginner</a></li>
+                    <li><a href="intermediate.html">Intermediate</a></li>
+                    <li><a href="advanced.html">Advanced</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unitcontent">
+            <p style="font-size: large;">Master advanced lighting techniques to enhance your photography. Learn about different light sources, modifiers, and creative lighting setups.</p>
+
+            <h2>Understanding Light Sources</h2>
+            <p>Learn about the different types of light sources used in photography, including natural light, artificial light, and mixed lighting.</p>
+            <ul>
+                <li><strong>Natural Light:</strong> Utilize sunlight to enhance your images naturally.</li>
+                <li><strong>Artificial Light:</strong> Explore various artificial lighting options like studio lights and flashes.</li>
+                <li><strong>Mixed Lighting:</strong> Learn how to balance natural and artificial light for unique effects.</li>
+            </ul>
+
+            <h2>Using Light Modifiers</h2>
+            <p>Discover how light modifiers like reflectors, diffusers, and softboxes can help control and shape light in your photography.</p>
+            <ul>
+                <li><strong>Reflectors:</strong> Use reflectors to bounce light and fill shadows.</li>
+                <li><strong>Diffusers:</strong> Soften harsh light with diffusers.</li>
+                <li><strong>Softboxes:</strong> Create soft, even lighting with softboxes.</li>
+            </ul>
+
+            <h2>Creative Lighting Setups</h2>
+            <p>Master advanced lighting setups such as Rembrandt lighting, split lighting, and backlighting to add creativity and depth to your photos.</p>
+            <ul>
+                <li><strong>Rembrandt Lighting:</strong> Create dramatic portraits with Rembrandt lighting.</li>
+                <li><strong>Split Lighting:</strong> Use split lighting for striking, high-contrast images.</li>
+                <li><strong>Backlighting:</strong> Achieve a glow effect by placing the light source behind the subject.</li>
+            </ul>
+        </div>
+
+        <div class="unitnext">
+            <h1 style="position: absolute; transform: translate(0%, -100%); color: aliceblue;">Start next course or quiz?</h1>
+            <button class="unitnextbtn" onclick="nextunit('advanced', 5)">Next unit</button>
+            <dialog id="quiz-dialog">
+                <div class="quiztopcontainer">
+                    <button onclick="closeDialog()" id="quiz-closebtn">Close</button>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h1 id="question">Loading...</h1>
+                    </div>
+                    <div class="quiz-optionscontainer">
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                    </div>
+
+                    <div id="results">
+                        <h1 id="results-announcement">Score = <span id="score">0</span></h1>
+                        <h3 id="correct">&#x2713<br>congrats! you got it right!</h3>
+                        <h3 id="wrong">&#x2715<br>sorry! You got it wrong.</h3>
+                        <h3 id="finished">Congratulations! You have finished all questions.</h3>
+                        <button id="quiz-next" onclick="navigateNextQuestion()">Next</button>
+                    </div>
+                </div>
+            </dialog>
+            <button onclick="openDialog('advancedUnit4')" id="quizopenbtn">Start Quiz</button>
+        </div>
+    </main>
+    <script src="unitscrpits.js"></script>
+</body>
+
+</html>

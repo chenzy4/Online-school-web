@@ -453,3 +453,65 @@ section {
 .fade-in.visible {
   opacity: 1;
 }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.contactcontainer {
+  width: 60%;
+  height: 60vh;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  border: 1px solid #000;
+  padding: 20px; 
+  margin: 20px auto; 
+  border-radius: 20px;
+}
+
+#contactform {
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
+}
+
+#contactimage {
+  height: 45vh;
+  width: 90%;
+  margin: 4%;
+  background-image: url("images/_DSC3698.JPG");
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.contactimgnlables {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.socialmedialabels {
+  margin-left: 45%;
+}
+
+#myinfo{
+  text-decoration: none;
+  color: #000;
+}
+
+.contacthero {
+  background-image: url("images/DSC_0676.JPG");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-weight: lighter;
+}

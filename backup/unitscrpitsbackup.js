@@ -88,3 +88,7 @@ function nextunit(level,unitnumber) {
     window.location.href= level +'unit' + unitnumber + '.html';
 }
 
+// Automatic slideshow
+//setInterval(() => {
+  //plusSlides(1);
+//}, 5000); // Change image every 5 seconds

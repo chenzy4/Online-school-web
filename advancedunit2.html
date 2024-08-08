@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Photography Course - Unit 2</title>
+    <link rel="stylesheet" href="unitstyle.css">
+</head>
+
+<body>
+    <main>
+        <section id="home" class="hero" style="background-image: url(images/_DSC3277.JPG);">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <h1 style="font-size: 60px; font-weight: 100;">Advanced Unit 2: Styles of Photography</h1>
+        </section>
+        <div class="container">
+            <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
+            <div class="sidebar">
+                <br><br>
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="beginner.html">Beginner</a></li>
+                    <li><a href="intermediate.html">Intermediate</a></li>
+                    <li><a href="advanced.html">Advanced</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unitcontent">
+            <p style="font-size: large;">Explore various styles of photography, including portrait, landscape, street, and wildlife photography. Learn the unique characteristics and techniques associated with each style.</p>
+
+            <h2>Portrait Photography</h2>
+            <p>Learn about different lighting techniques, posing subjects, and selecting backgrounds for stunning portrait photography.</p>
+            <ul>
+                <li><strong>Lighting Techniques:</strong> Use soft, diffused light for flattering portraits.</li>
+                <li><strong>Posing Subjects:</strong> Guide your subjects to create natural and engaging poses.</li>
+                <li><strong>Background Selection:</strong> Choose backgrounds that complement and enhance the subject.</li>
+            </ul>
+
+            <h2>Landscape Photography</h2>
+            <p>Discover tips for composing breathtaking landscapes, utilizing natural light, and mastering long exposure techniques.</p>
+            <ul>
+                <li><strong>Composition Tips:</strong> Use leading lines and the rule of thirds to create balanced compositions.</li>
+                <li><strong>Using Natural Light:</strong> Shoot during golden hour for the best light.</li>
+                <li><strong>Long Exposure Techniques:</strong> Capture motion and create dramatic effects with long exposures.</li>
+            </ul>
+
+            <h2>Street Photography</h2>
+            <p>Understand how to capture candid moments, navigate ethical considerations, and work with natural light in street photography.</p>
+            <ul>
+                <li><strong>Capturing Candid Moments:</strong> Be discreet and patient to capture genuine moments.</li>
+                <li><strong>Ethical Considerations:</strong> Respect the privacy and dignity of your subjects.</li>
+                <li><strong>Working with Natural Light:</strong> Use available light creatively to enhance your photos.</li>
+            </ul>
+
+            <h2>Wildlife Photography</h2>
+            <p>Learn about the importance of patience and timing, selecting the right equipment, and ensuring safety while photographing wildlife.</p>
+            <ul>
+                <li><strong>Patience and Timing:</strong> Wait for the perfect moment to capture wildlife behavior.</li>
+                <li><strong>Equipment Selection:</strong> Choose lenses and gear suitable for wildlife photography.</li>
+                <li><strong>Safety Tips:</strong> Stay safe and respect wildlife while photographing.</li>
+            </ul>
+        </div>
+
+        <div class="unitnext">
+            <h1 style="position: absolute; transform: translate(0%, -100%); color: aliceblue;">Start next course or quiz?</h1>
+            <button class="unitnextbtn" onclick="nextunit('advanced', 3)">Next unit</button>
+            <dialog id="quiz-dialog">
+                <div class="quiztopcontainer">
+                    <button onclick="closeDialog()" id="quiz-closebtn">Close</button>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h1 id="question">Loading...</h1>
+                    </div>
+                    <div class="quiz-optionscontainer">
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                    </div>
+
+                    <div id="results">
+                        <h1 id="results-announcement">Score = <span id="score">0</span></h1>
+                        <h3 id="correct">&#x2713<br>congrats! you got it right!</h3>
+                        <h3 id="wrong">&#x2715<br>sorry! You got it wrong.</h3>
+                        <h3 id="finished">Congratulations! You have finished all questions.</h3>
+                        <button id="quiz-next" onclick="navigateNextQuestion()">Next</button>
+                    </div>
+                </div>
+            </dialog>
+            <button onclick="openDialog('advancedUnit2')" id="quizopenbtn">Start Quiz</button>
+        </div>
+    </main>
+    <script src="unitscrpits.js"></script>
+</body>
+
+</html>

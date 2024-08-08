@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Intermediate Photography Course - Unit 3</title>
+    <link rel="stylesheet" href="unitstyle.css">
+</head>
+
+<body>
+    <main>
+        <section id="home" class="hero" style="background-image: url('images/DSC_3052.jpg'); background-position: center; background-size: cover;"> 
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <h1 style="font-size: 60px; font-weight: 100;">Intermediate Unit 3: Camera Settings for Different Environments</h1>
+        </section>
+        <div class="container">
+            <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
+            <div class="sidebar">
+                <br><br>
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="beginner.html">Beginner</a></li>
+                    <li><a href="intermediate.html">Intermediate</a></li>
+                    <li><a href="advanced.html">Advanced</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unitcontent">
+            <p style="font-size: large;">Welcome to the third intermediate lesson! In this lesson, you will learn how to adjust your camera settings for different environments, including challenging scenarios like night sky and fireworks photography. Understanding these settings will allow you to capture stunning images in a variety of lighting conditions.</p>
+
+            <h2>Night Sky Photography</h2>
+            <p>Photographing the night sky requires careful adjustments to your camera settings to capture the faint light from stars and other celestial objects.</p>
+            <div class="unitcontentimg" style="background-image: url(images/IMG_7834.JPG);"> </div>
+            <ol>
+                <li><strong>Use a Tripod:</strong> Stability is crucial for long exposures. A tripod will prevent camera shake.</li>
+                <li><strong>Set a Low ISO:</strong> Start with an ISO between 800 and 1600 to reduce noise while still capturing enough light.</li>
+                <li><strong>Use a Wide Aperture:</strong> Set your aperture to the widest setting your lens allows (e.g., f/2.8 or f/4) to let in more light.</li>
+                <li><strong>Long Exposure Time:</strong> Use a shutter speed between 15 and 30 seconds. Experiment to find the right balance between star movement and exposure.</li>
+                <li><strong>Focus Manually:</strong> Autofocus struggles in low light. Manually focus on a bright star or a distant light source.</li>
+            </ol>
+
+            <h2>Fireworks Photography</h2>
+            <p>Fireworks photography is about capturing the burst and light trails in a single shot. Here's how to adjust your settings:</p>
+            <div class="unitcontentimg" style="background-image: url(images/_DSC1270.JPG);"> </div>
+            <ol>
+                <li><strong>Use a Tripod:</strong> Like night sky photography, a tripod is essential for long exposures.</li>
+                <li><strong>Set a Low ISO:</strong> Start with an ISO of 100-200 to avoid noise in the dark sky.</li>
+                <li><strong>Use a Narrow Aperture:</strong> Set your aperture between f/8 and f/16 to ensure the fireworks are sharp and in focus.</li>
+                <li><strong>Long Exposure Time:</strong> Use a shutter speed of 2-5 seconds to capture the full burst of the fireworks. Experiment with bulb mode for more control.</li>
+                <li><strong>Manual Focus:</strong> Pre-focus your camera on a spot where you expect the fireworks to explode.</li>
+            </ol>
+
+            <h2>Portrait Photography in Low Light</h2>
+            <p>Low light portrait photography can be challenging but rewarding. Use these settings to capture stunning portraits:</p>
+            <div class="unitcontentimg" style="background-image: url(images/_DSC1878.jpg);"> </div>
+            <ol>
+                <li><strong>Increase ISO:</strong> Set your ISO between 800 and 1600, depending on the available light. Be cautious of noise.</li>
+                <li><strong>Use a Wide Aperture:</strong> An aperture of f/1.8 to f/2.8 will allow more light and create a pleasing bokeh effect.</li>
+                <li><strong>Use a Fast Shutter Speed:</strong> To avoid motion blur, keep your shutter speed above 1/60s.</li>
+                <li><strong>Use Artificial Light:</strong> Consider using a flash or a softbox to add more light and enhance your subject's features.</li>
+                <li><strong>Focus on the Eyes:</strong> Make sure the eyes are in sharp focus, as they are the focal point of any portrait.</li>
+            </ol>
+        </div>
+
+        <div class="unitnext">
+            <h1 style="position: absolute; transform: translate(0%, -100%); color: aliceblue;">Start next course or quiz?</h1>
+            <button class="unitnextbtn" onclick="nextunit('intermediate', 4)">Next unit</button>
+            <dialog id="quiz-dialog">
+                <div class="quiztopcontainer">
+                    <button onclick="closeDialog()" id="quiz-closebtn">Close</button>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h1 id="question">Loading...</h1>
+                    </div>
+                    <div class="quiz-optionscontainer">
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                    </div>
+
+                    <div id="results">
+                        <h1 id="results-announcement">Score = <span id="score">0</span></h1>
+                        <h3 id="correct">&#x2713<br>Congrats! You got it right!</h3>
+                        <h3 id="wrong">&#x2715<br>Sorry! You got it wrong.</h3>
+                        <h3 id="finished">Congratulations! You have finished all questions.</h3>
+                        <button id="quiz-next" onclick="navigateNextQuestion()">Next</button>
+                    </div>
+                </div>
+            </dialog>
+            <button onclick="openDialog('intermediateUnit3')" id="quizopenbtn">Start Quiz</button>
+        </div>
+    </main>
+    <script src="unitscrpits.js"></script>
+</body>
+
+</html>

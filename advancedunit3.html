@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Photography Course - Unit 3</title>
+    <link rel="stylesheet" href="unitstyle.css">
+</head>
+
+<body>
+    <main>
+        <section id="home" class="hero" style="background-image: url(images/_DSC3277.JPG);">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <h1 style="font-size: 60px; font-weight: 100;">Advanced Unit 3: Philosophy of Photography</h1>
+        </section>
+        <div class="container">
+            <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
+            <div class="sidebar">
+                <br><br>
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="beginner.html">Beginner</a></li>
+                    <li><a href="intermediate.html">Intermediate</a></li>
+                    <li><a href="advanced.html">Advanced</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unitcontent">
+            <p style="font-size: large;">Delve into the philosophical aspects of photography. Understand the impact of photography on society, the concept of truth in photography, and the photographer's role as an artist.</p>
+
+            <h2>The Impact of Photography on Society</h2>
+            <p>Explore how photography has shaped societies throughout history, influenced public opinion, and served as a powerful tool for change.</p>
+            <ul>
+                <li><strong>Historical Perspective:</strong> Examine key moments in history where photography played a significant role.</li>
+                <li><strong>Influence on Public Opinion:</strong> Understand how images can shape and shift public perception.</li>
+                <li><strong>Photography as a Tool for Change:</strong> Discover how photographers have used their work to advocate for social and political change.</li>
+            </ul>
+
+            <h2>The Concept of Truth in Photography</h2>
+            <p>Discuss the balance between objectivity and subjectivity in photography, the ethics of photo manipulation, and the contextual power of images.</p>
+            <ul>
+                <li><strong>Objectivity vs. Subjectivity:</strong> Debate the photographer's perspective and its influence on the image's truth.</li>
+                <li><strong>Photo Manipulation Ethics:</strong> Learn about the ethical considerations and controversies surrounding photo editing.</li>
+                <li><strong>The Power of Context:</strong> Analyze how context can alter the interpretation and meaning of a photograph.</li>
+            </ul>
+
+            <h2>The Photographer's Role as an Artist</h2>
+            <p>Explore the creative expression of photographers, their storytelling capabilities, and the balance between artistic vision and reality.</p>
+            <ul>
+                <li><strong>Creative Expression:</strong> Understand the artistic elements that photographers bring to their work.</li>
+                <li><strong>Storytelling Through Images:</strong> Learn how to tell compelling stories through a series of photographs.</li>
+                <li><strong>Balancing Art and Reality:</strong> Discuss the challenges photographers face in balancing their artistic vision with the portrayal of reality.</li>
+            </ul>
+        </div>
+
+        <div class="unitnext">
+            <h1 style="position: absolute; transform: translate(0%, -100%); color: aliceblue;">Start next course or quiz?</h1>
+            <button class="unitnextbtn" onclick="nextunit('advanced', 4)">Next unit</button>
+            <dialog id="quiz-dialog">
+                <div class="quiztopcontainer">
+                    <button onclick="closeDialog()" id="quiz-closebtn">Close</button>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h1 id="question">Loading...</h1>
+                    </div>
+                    <div class="quiz-optionscontainer">
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                    </div>
+
+                    <div id="results">
+                        <h1 id="results-announcement">Score = <span id="score">0</span></h1>
+                        <h3 id="correct">&#x2713<br>congrats! you got it right!</h3>
+                        <h3 id="wrong">&#x2715<br>sorry! You got it wrong.</h3>
+                        <h3 id="finished">Congratulations! You have finished all questions.</h3>
+                        <button id="quiz-next" onclick="navigateNextQuestion()">Next</button>
+                    </div>
+                </div>
+            </dialog>
+            <button onclick="openDialog('advancedUnit3')" id="quizopenbtn">Start Quiz</button>
+        </div>
+    </main>
+    <script src="unitscrpits.js"></script>
+</body>
+
+</html>
