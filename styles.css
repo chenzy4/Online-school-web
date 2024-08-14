@@ -44,7 +44,7 @@ section {
 }
 
 .hero {
-  background-image: url("images/_DSC1971.png");
+  background-image: url("/images/_DSC1971.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -163,7 +163,7 @@ section {
 
 
 .courses-hero {
-  background-image: url("images/_DSC3740.png");
+  background-image: url("/images/_DSC3740.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -293,7 +293,7 @@ section {
 }
 
 .index-coursesnav {
-  background-image: url("images/_DSC0392.png");
+  background-image: url("/images/_DSC0392.png");
   background-size: cover;
   height: 100vh;
   justify-content: center;
@@ -483,7 +483,7 @@ section {
   height: 45vh;
   width: 90%;
   margin: 4%;
-  background-image: url("images/_DSC3698.png");
+  background-image: url("/images/_DSC3698.png");
   background-position: center;
   background-size: cover;
   border-radius: 15px;
@@ -505,7 +505,7 @@ section {
 }
 
 .contacthero {
-  background-image: url("images/DSC_0676.png");
+  background-image: url("/images/DSC_0676.png");
   background-size: cover;
   background-position: center;
   display: flex;
