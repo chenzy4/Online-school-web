@@ -42,7 +42,7 @@ section {
 }
 
 .hero {
-  background-image: url("images/_DSC1971.JPG");
+  background-image: url("images/_DSC1971.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -125,7 +125,7 @@ section {
 }
 
 .courses-hero {
-  background-image: url("images/_DSC3740.JPG");
+  background-image: url("images/_DSC3740.png");
   background-size: cover;
   background-position: center;
   display: flex;
