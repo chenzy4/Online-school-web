@@ -53,21 +53,43 @@
     </div>
 
     <div class="unitnext">
-        <h1 style=" position: absolute; transform: translate(0%, -100%); color: aliceblue;"> Start next course or quiz? </h1>
+        <h1 style=" position: absolute; transform: translate(0%, -100%); color: aliceblue;"> Start next course or
+            quiz? </h1>
         <button class="unitnextbtn" onclick="nextunit('beginner', 4)">Next unit</button>
         <dialog id="quiz-dialog">
             <div class="quiztopcontainer">
-                <p id="question">Loading...</p>
-                <button onclick="closeDialog()" class="quizclosebtn">Close</button>
+                <button onclick="closeDialog()" id="quiz-closebtn">Close</button>
             </div>
+    
             <div class="quiz-container">
-              <button class="quiz-option"></button>
-              <button class="quiz-option"></button>
-              <button class="quiz-option"></button>
-              <button class="quiz-option"></button>
-            </div>
+                <div class="quiz-question">
+                    <h1 id="question">Loading...</h1>
+                </div>
+                <div class="quiz-optionscontainer">
+                    <button class="quiz-option"></button>
+                    <button class="quiz-option"></button>
+                    <button class="quiz-option"></button>
+                    <button class="quiz-option"></button>
+                </div>
+    
+                <div id="results">
+                    <h1 id="results-announcement">Score = <span id="score"> 0</span></h1>
+                    <h3 id="correct">&#x2713
+                        <br>
+                        congrats! you got it right!
+                    </h3>
+                    <h3 id="wrong"> &#x2715
+                        <br>
+                        sorry! You got it wrong.
+                    </h3>
+                    <h3 id="finished">
+                        Congratulations! You have finished all questions.
+                    </h3>
+                    <button id="quiz-next" onclick="navigateNextQuestion()">Next</button>
+                </div>
         </dialog>
-        <button onclick="openDialog()" id="quizopenbtn">Start Quiz</button>
+        <button onclick="openDialog('beginnerUnit3')" id="quizopenbtn">Start Quiz</button>
+        </div>
     </div>
 </main>
 <script src="unitscrpits.js"></script>
